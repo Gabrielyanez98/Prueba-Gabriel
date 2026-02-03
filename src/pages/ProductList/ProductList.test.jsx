@@ -2,15 +2,15 @@ import { render, screen } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 import { describe, it, expect, vi } from 'vitest';
 import ProductListPage from './ProductList';
-import * as hooks from '../../hooks/useProducts';
+import * as productsApi from '../../features/api/productsApi';
 
-vi.mock('../../hooks/useProducts');
+vi.mock('../../features/api/productsApi');
 
 describe('ProductListPage Component', () => {
     it('should show loading spinner when data is fetching', () => {
-        vi.spyOn(hooks, 'useProducts').mockReturnValue({
-            products: [],
-            loading: true,
+        vi.spyOn(productsApi, 'useGetProductsQuery').mockReturnValue({
+            data: [],
+            isLoading: true,
             error: null
         });
 
@@ -20,9 +20,9 @@ describe('ProductListPage Component', () => {
     });
 
     it('should show error message when fetching fails', () => {
-        vi.spyOn(hooks, 'useProducts').mockReturnValue({
-            products: [],
-            loading: false,
+        vi.spyOn(productsApi, 'useGetProductsQuery').mockReturnValue({
+            data: [],
+            isLoading: false,
             error: 'Failed to fetch products'
         });
 
@@ -36,9 +36,9 @@ describe('ProductListPage Component', () => {
             { id: '2', brand: 'Alcatel', model: 'OneTouch', price: '150', imgUrl: '' }
         ];
 
-        vi.spyOn(hooks, 'useProducts').mockReturnValue({
-            products: mockProducts,
-            loading: false,
+        vi.spyOn(productsApi, 'useGetProductsQuery').mockReturnValue({
+            data: mockProducts,
+            isLoading: false,
             error: null
         });
 
