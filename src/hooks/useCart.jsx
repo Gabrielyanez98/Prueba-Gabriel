@@ -21,7 +21,7 @@ export const useCart = () => {
       return response.count; 
     } catch (err) {
       setError('No se pudo añadir el producto al carrito.');
-      return null;
+      return err;
     } finally {
       setIsAdding(false);
     }

@@ -30,13 +30,9 @@ const fetchWithCache = async (url, cacheKey) => {
   const cachedData = getCache(cacheKey);
   if (cachedData) return cachedData;
 
-  try {
     const response = await apiClient.get(url);
     setCache(cacheKey, response.data);
     return response.data;
-  } catch (error) {
-    throw error;
-  }
 };
 
 export const api = {

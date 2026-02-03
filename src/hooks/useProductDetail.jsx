@@ -16,6 +16,7 @@ export const useProductDetail = (id) => {
         setProduct(data);
       } catch (err) {
         setError('No se pudo cargar la información del producto.');
+        return err;
       } finally {
         setLoading(false);
       }
