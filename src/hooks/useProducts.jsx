@@ -15,6 +15,7 @@ export const useProducts = () => {
         setError(null);
       } catch (err) {
         setError('Error al cargar los productos. Por favor, inténtelo de nuevo más tarde.');
+        return err;
       } finally {
         setLoading(false);
       }
