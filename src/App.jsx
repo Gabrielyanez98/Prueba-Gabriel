@@ -1,13 +1,18 @@
-import './App.css'
+import AppRoutes from './routes/AppRoutes';
+import Header from './components/Header/Header';
 
 function App() {
+
+  const cartCount = 0;
+
   return (
-    <>
-      <h1 className="text-3xl font-bold underline">
-        Hello world!
-      </h1>
-    </>
-  )
+    <div className="min-h-screen bg-gray-50">
+      <Header cartCount={cartCount} />
+      <main className="container mx-auto">
+        <AppRoutes />
+      </main>
+    </div>
+  );
 }
 
-export default App
+export default App;
