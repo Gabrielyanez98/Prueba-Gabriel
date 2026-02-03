@@ -1,9 +1,9 @@
 import { Link, useLocation } from 'react-router-dom';
-import { useCartContext } from '../../context/CartContext';
-
+import { useSelector } from 'react-redux';
+import { selectCartCount } from '../../features/cart/cartSlice';
 
 const Header = () => {
-  const { cartCount } = useCartContext();
+  const cartCount = useSelector(selectCartCount);
   const location = useLocation();
 
   const pathnames = location.pathname.split('/').filter((x) => x);
@@ -11,7 +11,7 @@ const Header = () => {
   return (
     <header className="bg-white border-b border-gray-200 sticky top-0 z-50 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
-        
+
         <Link to="/" className="text-2xl font-extrabold text-blue-700 tracking-tighter">
           ITX-Store
         </Link>
@@ -21,7 +21,7 @@ const Header = () => {
           {pathnames.map((name, index) => {
             const routeTo = `/${pathnames.slice(0, index + 1).join('/')}`;
             const isLast = index === pathnames.length - 1;
- 
+
             const displayName = name === 'product' ? 'Product' : name;
 
             return (

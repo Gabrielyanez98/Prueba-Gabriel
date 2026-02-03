@@ -23,7 +23,6 @@ const Description = ({ product }) => {
         {Object.entries(SPEC_LABELS).map(([key, label]) => {
           let value = product[key];
 
-          // Formateo específico para unidades
           if (key === 'price' && value) value = `${value}€`;
           if (key === 'weight' && value) value = `${value}g`;
 

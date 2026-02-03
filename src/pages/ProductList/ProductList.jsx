@@ -1,10 +1,10 @@
 import { useState, useMemo } from 'react';
-import { useProducts } from '../../hooks/useProducts';
+import { useGetProductsQuery } from '../../features/api/productsApi';
 import Search from '../../components/Search/Search';
 import Item from '../../components/Item/Item';
 
 const ProductListPage = () => {
-  const { products, loading, error } = useProducts();
+  const { data: products = [], isLoading: loading, error } = useGetProductsQuery();
   const [searchTerm, setSearchTerm] = useState('');
 
   const filteredProducts = useMemo(() => {
@@ -24,7 +24,7 @@ const ProductListPage = () => {
   if (error) return (
     <div className="max-w-7xl mx-auto px-4 mt-10">
       <div className="bg-red-50 border-l-4 border-red-400 p-4 text-red-700">
-        <p className="font-bold">Error</p>
+        <p className="font-bold">It has been an error, please try again later.</p>
         <p>{error}</p>
       </div>
     </div>

@@ -1,7 +1,7 @@
 import { useParams, Link } from 'react-router-dom';
-import { useProductDetail } from '../../hooks/useProductDetail';
-import { useCart } from '../../hooks/useCart';
-import { useCartContext } from '../../context/CartContext';
+import { useDispatch } from 'react-redux';
+import { useGetProductDetailQuery, useAddToCartMutation } from '../../features/api/productsApi';
+import { updateCartCount } from '../../features/cart/cartSlice';
 import Actions from '../../components/Actions/Actions';
 import Description from '../../components/Description/Description';
 import Image from '../../components/Image/Image';
@@ -9,15 +9,24 @@ import Image from '../../components/Image/Image';
 
 const ProductDetailPage = () => {
     const { id } = useParams();
-    const { product, loading, error } = useProductDetail(id);
-    const { addProductToCart, isAdding } = useCart();
-    const { updateCartCount } = useCartContext();
+    const dispatch = useDispatch();
+    const { data: product, isLoading: loading, error } = useGetProductDetailQuery(id);
+    const [addToCart, { isLoading: isAdding }] = useAddToCartMutation();
 
     const handleAddToCart = async (colorCode, storageCode) => {
-        const responseCount = await addProductToCart(id, colorCode, storageCode);
+        try {
+            const payload = {
+                id,
+                colorCode: parseInt(colorCode),
+                storageCode: parseInt(storageCode)
+            };
+            const response = await addToCart(payload).unwrap();
 
-        if (responseCount) {
-            updateCartCount(responseCount);
+            if (response?.count) {
+                dispatch(updateCartCount(response.count));
+            }
+        } catch (err) {
+            console.error('Failed to add to cart:', err);
         }
     };
 
