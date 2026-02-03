@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for pages/ProductList/ProductList.jsx</title>
+    <title>Code coverage report for components/Description/Description.jsx</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../prettify.css" />
     <link rel="stylesheet" href="../../base.css" />
@@ -19,34 +19,34 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../../index.html">All files</a> / <a href="index.html">pages/ProductList</a> ProductList.jsx</h1>
+        <h1><a href="../../index.html">All files</a> / <a href="index.html">components/Description</a> Description.jsx</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">90% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>13/13</span>
+                <span class='fraction'>9/10</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">75% </span>
+                <span class="strong">90% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>6/8</span>
+                <span class='fraction'>9/10</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>4/4</span>
+                <span class='fraction'>2/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>11/11</span>
+                <span class='fraction'>8/8</span>
             </div>
         
             
@@ -120,34 +120,16 @@
 <a name='L55'></a><a href='#L55'>55</a>
 <a name='L56'></a><a href='#L56'>56</a>
 <a name='L57'></a><a href='#L57'>57</a>
-<a name='L58'></a><a href='#L58'>58</a>
-<a name='L59'></a><a href='#L59'>59</a>
-<a name='L60'></a><a href='#L60'>60</a>
-<a name='L61'></a><a href='#L61'>61</a>
-<a name='L62'></a><a href='#L62'>62</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L58'></a><a href='#L58'>58</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -161,16 +143,13 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">11x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -182,78 +161,87 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { useState, useMemo } from 'react';
-import { useProducts } from '../../hooks/useProducts';
-import Search from '../../components/Search/Search';
-import Item from '../../components/Item/Item';
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import PropTypes from 'prop-types';
 &nbsp;
-const ProductListPage = () =&gt; {
-  const { products, loading, error } = useProducts();
-  const [searchTerm, setSearchTerm] = useState('');
-&nbsp;
-  const filteredProducts = useMemo(() =&gt; {
-    const term = searchTerm.toLowerCase();
-    return products.filter((p) =&gt;
-      p.brand.toLowerCase().includes(term) ||
-<span class="branch-1 cbranch-no" title="branch not covered" >      p.model.toLowerCase().includes(term)</span>
-    );
-  }, [products, searchTerm]);
-&nbsp;
-  if (loading) return (
-    &lt;div className="flex justify-center items-center min-h-[60vh]" role="status" aria-label="Loading"&gt;
-      &lt;div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500"&gt;&lt;/div&gt;
-    &lt;/div&gt;
-  );
-&nbsp;
-  if (error) return (
-    &lt;div className="max-w-7xl mx-auto px-4 mt-10"&gt;
-      &lt;div className="bg-red-50 border-l-4 border-red-400 p-4 text-red-700"&gt;
-        &lt;p className="font-bold"&gt;Error&lt;/p&gt;
-        &lt;p&gt;{error}&lt;/p&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  );
+const Description = ({ product }) =&gt; {
+ 
+  const SPEC_LABELS = {
+    brand: 'Brand',
+    model: 'Model',
+    price: 'Price',
+    cpu: 'CPU',
+    ram: 'RAM',
+    os: 'OS',
+    displayResolution: 'Display Resolution',
+    battery: 'Battery',
+    primaryCamera: 'Cameras',
+    dimentions: 'Dimensions',
+    weight: 'Weight',
+  };
 &nbsp;
   return (
-    &lt;div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8"&gt;
+    &lt;div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100"&gt;
+      &lt;h2 className="text-2xl font-bold mb-4 text-gray-800 border-b pb-2"&gt;Technical Specifications&lt;/h2&gt;
+      &lt;dl className="grid grid-cols-1 gap-y-3"&gt;
+        {Object.entries(SPEC_LABELS).map(([key, label]) =&gt; {
+          let value = product[key];
 &nbsp;
-      &lt;Search value={searchTerm} onChange={setSearchTerm} /&gt;
+          // Formateo específico para unidades
+          if (key === 'price' &amp;&amp; value) value = `${value}€`;
+          <span class="missing-if-branch" title="if path not taken" >I</span>if (key === 'weight' &amp;&amp; value) <span class="cstat-no" title="statement not covered" >value = `${value}g`;</span>
 &nbsp;
-      &lt;div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"&gt;
-        {filteredProducts.map((product) =&gt; (
-          &lt;Item
-            key={product.id}
-            id={product.id}
-            imgUrl={product.imgUrl}
-            brand={product.brand}
-            model={product.model}
-            price={product.price}
-          /&gt;
-        ))}
-      &lt;/div&gt;
-&nbsp;
-      {filteredProducts.length === 0 &amp;&amp; (
-<span class="branch-1 cbranch-no" title="branch not covered" >        &lt;div className="text-center py-20 bg-gray-50 rounded-xl mt-8"&gt;</span>
-          &lt;p className="text-gray-500 text-lg"&gt;
-            No products found matching &amp;quot;{searchTerm}&amp;quot;
-          &lt;/p&gt;
-        &lt;/div&gt;
-      )}
+          return (
+            &lt;div key={key} className="flex justify-between border-b border-gray-50 pb-1"&gt;
+              &lt;dt className="text-sm font-semibold text-gray-500 uppercase"&gt;{label}&lt;/dt&gt;
+              &lt;dd className="text-sm text-gray-900 text-right"&gt;{value || 'N/A'}&lt;/dd&gt;
+            &lt;/div&gt;
+          );
+        })}
+      &lt;/dl&gt;
     &lt;/div&gt;
   );
 };
 &nbsp;
-export default ProductListPage;</pre></td></tr></table></pre>
+Description.propTypes = {
+  product: PropTypes.shape({
+    brand: PropTypes.string,
+    model: PropTypes.string,
+    price: PropTypes.string,
+    cpu: PropTypes.string,
+    ram: PropTypes.string,
+    os: PropTypes.string,
+    displayResolution: PropTypes.string,
+    battery: PropTypes.string,
+    primaryCamera: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
+    dimentions: PropTypes.string,
+    weight: PropTypes.string,
+  }).isRequired,
+};
+&nbsp;
+export default Description;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
             </div><!-- /wrapper -->
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-02-03T15:59:22.025Z
+                at 2026-02-03T17:10:25.698Z
             </div>
         <script src="../../prettify.js"></script>
         <script>

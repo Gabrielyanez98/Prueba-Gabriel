@@ -1,6 +1,9 @@
 import { Link, useLocation } from 'react-router-dom';
+import { useCartContext } from '../../context/CartContext';
+
 
 const Header = () => {
+  const { cartCount } = useCartContext();
   const location = useLocation();
 
   const pathnames = location.pathname.split('/').filter((x) => x);
@@ -18,6 +21,7 @@ const Header = () => {
           {pathnames.map((name, index) => {
             const routeTo = `/${pathnames.slice(0, index + 1).join('/')}`;
             const isLast = index === pathnames.length - 1;
+ 
             const displayName = name === 'product' ? 'Product' : name;
 
             return (
@@ -37,7 +41,7 @@ const Header = () => {
 
         <div className="flex items-center gap-2 bg-blue-50 px-3 py-1.5 rounded-full border border-blue-100">
           <span className="text-xl">🛒</span>
-          <span className="font-bold text-blue-700">0</span>
+          <span className="font-bold text-blue-700">{cartCount}</span>
         </div>
       </div>
     </header>
